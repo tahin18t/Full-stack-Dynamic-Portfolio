@@ -1,0 +1,25 @@
+Regular taks in Lab
+-----------------
+    Download & Install Composer
+
+
+Run This Command
+-------------------
+    composer global require laravel/installer
+
+
+Clone Your Project Repository
+-----------------------
+
+
+Run These Commands
+---------------------
+    composer update
+    copy .env.example .env
+    php artisan key:generate
+    php artisan migrate
+
+
+Host the site by this command
+-----------------------------
+    php artisan serve
