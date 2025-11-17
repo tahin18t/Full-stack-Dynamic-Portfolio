@@ -43,5 +43,102 @@ solutions.</p>
             </div>
         </div>
     </header>
+
+    <main>
+        <section id="education">
+            <div class="container">
+                <h2>Education</h2>
+                <div class="grid">
+                    <article class="card">
+                        <h3>B.Sc. in Computer Science</h3>
+                        <p>University / Institute • Year–Year</p>
+                        <p>Brief highlight of coursework, GPA, achievements.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Relevant Courses</h3>
+                        <p>Algorithms, DBMS, Web Dev, ML, etc.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="activity">
+            <div class="container">
+                <h2>Activity</h2>
+                <div class="grid">
+                    <article class="card">
+                        <h3>Project / Club</h3>
+                        <p>Role • Date</p>
+                        <p>What you did, impact, tech used.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Hackathon / Event</h3>
+                        <p>Result • Date</p>
+                        <p>Key contribution and outcome.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="certificate">
+            <div class="container">
+                <h2>Certificates</h2>
+                <div class="grid">
+                    <article class="card">
+                        <h3>Certificate Name</h3>
+                        <p>Issuer • Month Year</p>
+                        <p><a href="#">View credential</a></p>
+                    </article>
+                    <article class="card">
+                        <h3>Another Certificate</h3>
+                        <p>Issuer • Month Year</p>
+                        <p><a href="#">View credential</a></p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <div class="container">
+                <h2>Skills</h2>
+                <div class="grid">
+                    <article class="card">
+                        <h3>Languages</h3>
+                        <p>PHP, JavaScript, Python, C++</p>
+                    </article>
+                    <article class="card">
+                        <h3>Frameworks</h3>
+                        <p>Laravel, Vue/React, Tailwind</p>
+                    </article>
+                    <article class="card">
+                        <h3>Tools</h3>
+                        <p>Git, MySQL, Docker, Postman</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© {{ date('Y') }} Tahin. All rights reserved.</p>
+        </div>
+    </footer>
+
+    {{-- Optional: highlight active link on scroll (small, dependency-free) --}}
+    <script>
+        const links = document.querySelectorAll('.nav-links a');
+        const sections = [...document.querySelectorAll('main section, header#home')];
+        const byId = id => document.getElementById(id);
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + entry.target.id));
+                }
+            });
+        }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+        sections.forEach(s => observer.observe(s));
+    </script>
+
 </body>
 </html>
