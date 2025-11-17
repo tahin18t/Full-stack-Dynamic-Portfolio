@@ -44,27 +44,45 @@ solutions.</p>
         </div>
     </header>
 
+    <hr>
+
     <main>
         <section id="education">
             <div class="container">
-                <h2>Education</h2>
+                <h1 style="">Education</h1>
                 <div class="grid">
                     <article class="card">
-                        <h3>B.Sc. in Computer Science</h3>
-                        <p>University / Institute • Year–Year</p>
-                        <p>Brief highlight of coursework, GPA, achievements.</p>
+                        <h2>SSC</h2>
+                        <hr class="eduHr">
+                        <p>Institute: Panirchara Adarsha High School</p>
+                        <p>Subject: Science</p>
+                        <p>Session: 2017-2018</p>
+                        <p>CGPA: 3.94</p>
                     </article>
                     <article class="card">
-                        <h3>Relevant Courses</h3>
-                        <p>Algorithms, DBMS, Web Dev, ML, etc.</p>
+                        <h2>HSC</h2>
+                        <hr class="EduHr">
+                        <p>Institute: Cox's Bazar City College</p>
+                        <p>Subject: Science</p>
+                        <p>Session: 2020-2021</p>
+                        <p>CGPA: 4.25</p>
+                    </article><article class="card">
+                        <h2>B.Sc</h2>
+                        <hr class="EduHr">
+                        <p>Institute: Daffodil International University</p>
+                        <p>Subject: Computer Science and Engineering</p>
+                        <p>Session: 2022-2026</p>
+                        <p>Current CGPA: 3.5</p>
                     </article>
                 </div>
             </div>
         </section>
 
+        <hr>
+
         <section id="activity">
             <div class="container">
-                <h2>Activity</h2>
+                <h1>Activity</h1>
                 <div class="grid">
                     <article class="card">
                         <h3>Project / Club</h3>
@@ -79,6 +97,8 @@ solutions.</p>
                 </div>
             </div>
         </section>
+
+        <hr>
 
         <section id="certificate">
             <div class="container">
@@ -97,6 +117,8 @@ solutions.</p>
                 </div>
             </div>
         </section>
+
+        <hr>
 
         <section id="skills">
             <div class="container">

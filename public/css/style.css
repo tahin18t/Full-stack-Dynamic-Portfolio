@@ -13,6 +13,13 @@ html {
   scroll-behavior: smooth;
 }
 
+hr {
+  border: none;
+  height: 2px;
+  background-color: #cbd5e1;
+  box-shadow: 0 2px 6px rgba(100, 116, 139, 0.3);
+}
+
 body {
   margin: 0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
@@ -24,6 +31,7 @@ body {
   max-width: 1300px;
   margin: 0 auto;
   padding: 0 1rem;
+  margin-top: 10px;
 }
 
 /* Navbar */
@@ -78,8 +86,9 @@ body {
 /* Hero */
 .hero{
   display: flex;
-  margin-top: 100px;
+  margin-top: 90px;
   justify-content: space-between;
+  margin-bottom: 70px;
 }
 .heroInfo{
   width: 50%;
@@ -98,10 +107,10 @@ body {
   border-left: 5px solid #64748b;
   border-radius: 10px;
   padding-left: 10px;
+  margin-bottom: 40px;
 }
 .heroImg{
   display: flex;
-  align-items: center;
   margin-right: 100px;
   border-right: 12px solid black;
   border-bottom: 12px solid black;
@@ -111,9 +120,8 @@ body {
 #heroImg{
   margin: auto;
   border-radius: 48%;
-  width: 350px;
+  width: 355px;
   place-items: center;
-
 }
 
 /* Buttons */
@@ -144,11 +152,6 @@ section {
   padding: 4rem 0;
 }
 
-section h2 {
-  font-size: 1.5rem;
-  margin: 0 0 1rem;
-}
-
 .grid {
   display: grid;
   gap: 1rem;
@@ -159,7 +162,67 @@ section h2 {
   background: #fff;
   border: 1px solid var(--line);
   border-radius: .75rem;
-  padding: 1rem;
+  padding: 40px;
+}
+
+.card h1{
+  margin-block-end: 1.2em;
+}
+
+.card p{
+    font-weight: 400;
+}
+
+/* base hr style inside cards */
+.card hr {
+  border: none;
+  height: 2px;
+  background-color: #cbd5e1;
+  box-shadow: 0 2px 6px rgba(100, 116, 139, 0.3);
+
+  width: 0;              /* start hidden */
+  margin: 8px 0 16px;
+  opacity: 0;
+
+  animation-fill-mode: forwards;
+}
+
+/* when card is hovered: line appears left → right */
+.card:hover hr {
+  animation: hrIn 0.35s ease-out forwards;
+}
+
+/* when card is NOT hovered: line disappears right → left */
+.card:not(:hover) hr {
+  animation: hrOut 0.35s ease-in forwards;
+}
+
+/* keyframes for showing the line (left to right) */
+@keyframes hrIn {
+  0% {
+    width: 0;
+    margin-left: 0;
+    opacity: 0;
+  }
+  100% {
+    width: 100%;
+    margin-left: 0;
+    opacity: 1;
+  }
+}
+
+/* keyframes for hiding the line (right to left) */
+@keyframes hrOut {
+  0% {
+    width: 100%;
+    margin-left: 0;
+    opacity: 1;
+  }
+  100% {
+    width: 0;
+    margin-right: 100%;  /* shrinks to the right side */
+    opacity: 0;
+  }
 }
 
 /* Footer */
