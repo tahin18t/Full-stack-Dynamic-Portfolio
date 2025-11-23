@@ -80,26 +80,6 @@ solutions.</p>
 
         <hr>
 
-        <section id="activity">
-            <div class="container">
-                <h1>Activity</h1>
-                <div class="grid">
-                    <article class="card">
-                        <h3>Project / Club</h3>
-                        <p>Role • Date</p>
-                        <p>What you did, impact, tech used.</p>
-                    </article>
-                    <article class="card">
-                        <h3>Hackathon / Event</h3>
-                        <p>Result • Date</p>
-                        <p>Key contribution and outcome.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <hr>
-
         <section id="certificate">
             <div class="container">
                 <h2>Certificates</h2>
@@ -126,15 +106,23 @@ solutions.</p>
                 <div class="grid">
                     <article class="card">
                         <h3>Languages</h3>
-                        <p>PHP, JavaScript, Python, C++</p>
+                        <p>C, C++, Java, Python, JavaScript, NodeJS, PHP</p>
                     </article>
                     <article class="card">
                         <h3>Frameworks</h3>
-                        <p>Laravel, Vue/React, Tailwind</p>
+                        <p>Vue/React, Tailwind, Bootstrap, ExpressJS, Laravel</p>
+                    </article>
+                    <article class="card">
+                        <h3>Database</h3>
+                        <p>MySQL, MongoDB</p>
                     </article>
                     <article class="card">
                         <h3>Tools</h3>
-                        <p>Git, MySQL, Docker, Postman</p>
+                        <p>Git, Postman, Figma</p>
+                    </article>
+                    <article class="card">
+                        <h3>Core Concept:</h3>
+                        <p>OOP, Data Structure, Algirithm, Problem Solving, Critical Thinking</p>
                     </article>
                 </div>
             </div>
