@@ -85,13 +85,13 @@ solutions.</p>
                 <h2>Certificates</h2>
                 <div class="grid">
                     <article class="card">
-                        <h3>Certificate Name</h3>
-                        <p>Issuer • Month Year</p>
-                        <p><a href="#">View credential</a></p>
+                        <h3>Full Stack Web Development With JavaScript</h3>
+                        <p>OSTAD | December, 2024</p>
+                        <p><a href="https://drive.google.com/file/d/1gmU-xbgsjddMrWSsSeOQMO_kGAsT06Ct/view?usp=drive_link">View certificate</a></p>
                     </article>
                     <article class="card">
-                        <h3>Another Certificate</h3>
-                        <p>Issuer • Month Year</p>
+                        <h3>AWS Academy Graduate - AWS Academy Machine Learning Foundations</h3>
+                        <p>AWS • September, 2025</p>
                         <p><a href="#">View credential</a></p>
                     </article>
                 </div>
