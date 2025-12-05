@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<!-- <html lang="{{ str_replace('_', '-', app()->getLocale()) }}"> -->
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Tahin | Portfolio</title>
 
-    {{-- Preferred: serve your CSS via Laravel's asset helper --}}
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
 </head>
@@ -49,7 +48,7 @@ solutions.</p>
     <main>
         <section id="education">
             <div class="container">
-                <h1 style="">Education</h1>
+                <h1>Education</h1>
                 <div class="grid">
                     <article class="card">
                         <h2>SSC</h2>
@@ -66,7 +65,8 @@ solutions.</p>
                         <p>Subject: Science</p>
                         <p>Session: 2020-2021</p>
                         <p>CGPA: 4.25</p>
-                    </article><article class="card">
+                    </article>
+                    <article class="card">
                         <h2>B.Sc</h2>
                         <hr class="EduHr">
                         <p>Institute: Daffodil International University</p>
@@ -104,23 +104,23 @@ solutions.</p>
             <div class="container">
                 <h2>Skills</h2>
                 <div class="grid">
-                    <article class="card">
+                    <article class="card skill-item">
                         <h3>Languages</h3>
                         <p>C, C++, Java, Python, JavaScript, NodeJS, PHP</p>
                     </article>
-                    <article class="card">
+                    <article class="card skill-item">
                         <h3>Frameworks</h3>
                         <p>Vue/React, Tailwind, Bootstrap, ExpressJS, Laravel</p>
                     </article>
-                    <article class="card">
+                    <article class="card skill-item">
                         <h3>Database</h3>
                         <p>MySQL, MongoDB</p>
                     </article>
-                    <article class="card">
+                    <article class="card skill-item">
                         <h3>Tools</h3>
                         <p>Git, Postman, Figma</p>
                     </article>
-                    <article class="card">
+                    <article class="card skill-item">
                         <h3>Core Concept:</h3>
                         <p>OOP, Data Structure, Algirithm, Problem Solving, Critical Thinking</p>
                     </article>
@@ -135,20 +135,9 @@ solutions.</p>
         </div>
     </footer>
 
-    {{-- Optional: highlight active link on scroll (small, dependency-free) --}}
-    <script>
-        const links = document.querySelectorAll('.nav-links a');
-        const sections = [...document.querySelectorAll('main section, header#home')];
-        const byId = id => document.getElementById(id);
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + entry.target.id));
-                }
-            });
-        }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
-        sections.forEach(s => observer.observe(s));
-    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="{{ asset('js/script.js') }}"></script>
 
 </body>
 </html>

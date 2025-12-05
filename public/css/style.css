@@ -1,8 +1,10 @@
 :root {
-  --text: #0f172a;
-  --muted: #475569;
-  --line: #e2e8f0;
-  --bg: #f8fafc;
+  --text: #f1f5f9;           /* light text */
+  --muted: #94a3b8;         /* subtle text */
+  --line: #334155;          /* borders */
+  --bg: #0f172a;            /* main background */
+  --card-bg: #1e293b;       /* card background */
+  --primary: #38bdf8;       /* sky-400 */
 }
 
 * {
@@ -11,13 +13,6 @@
 
 html {
   scroll-behavior: smooth;
-}
-
-hr {
-  border: none;
-  height: 2px;
-  background-color: #cbd5e1;
-  box-shadow: 0 2px 6px rgba(100, 116, 139, 0.3);
 }
 
 body {
@@ -39,7 +34,8 @@ body {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(255, 255, 255, .85);
+  background: rgba(15, 23, 42, .85);
+  backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--line);
 }
 
@@ -54,18 +50,16 @@ body {
   margin: 0;
   font-size: 1.25rem;
   letter-spacing: .5px;
+  color: var(--primary);
 }
 
 .nav-links {
   display: flex;
   gap: 1rem;
   list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
 .nav-links a {
-  display: inline-block;
   padding: .5rem .75rem;
   border-radius: .5rem;
   text-decoration: none;
@@ -74,54 +68,53 @@ body {
 }
 
 .nav-links a:hover {
-  background: #f1f5f9;
+  background: #1e293b;
 }
 
 .nav-links a.active {
-  background: var(--text);
-  color: #fff;
-  background: #0f172a; color: #fff;
+  background: var(--primary);
+  color: #000;
 }
 
 /* Hero */
-.hero{
+.hero {
   display: flex;
   margin-top: 90px;
   justify-content: space-between;
   margin-bottom: 70px;
 }
-.heroInfo{
+
+.heroInfo {
   width: 50%;
 }
-.title{
+
+.title {
   font-size: 50px;
+  color: var(--primary);
 }
-.subtitle{
+
+.subtitle {
   color: var(--muted);
-  font-style: italic;
-}
-.summary{
   font-size: 20px;
-  color: var(--text);
-  font-style: normal;
-  border-left: 5px solid #64748b;
-  border-radius: 10px;
-  padding-left: 10px;
+}
+
+.summary {
+  font-size: 18px;
+  color: var(--muted);
+  border-left: 5px solid var(--primary);
+  padding-left: 12px;
   margin-bottom: 40px;
 }
-.heroImg{
-  display: flex;
-  margin-right: 100px;
-  border-right: 12px solid black;
-  border-bottom: 12px solid black;
+
+.heroImg {
+  border-right: 8px solid var(--primary);
+  border-bottom: 8px solid var(--primary);
   border-radius: 50%;
 }
 
-#heroImg{
-  margin: auto;
-  border-radius: 48%;
+#heroImg {
   width: 355px;
-  place-items: center;
+  border-radius: 48%;
 }
 
 /* Buttons */
@@ -134,17 +127,13 @@ body {
   padding: .65rem 1rem;
   border-radius: .75rem;
   text-decoration: none;
-  border: 1px solid var(--text);
-  color: var(--text);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  border: 1px solid var(--primary);
+  color: var(--primary);
 }
 
 .btn.primary {
-  background: var(--text);
-  color: #fff;
-  border-color: var(--text);
+  background: var(--primary);
+  color: #000;
 }
 
 /* Sections */
@@ -154,87 +143,50 @@ section {
 
 .grid {
   display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
 }
 
 .card {
-  background: #fff;
+  background: var(--card-bg);
   border: 1px solid var(--line);
-  border-radius: .75rem;
+  border-radius: 1rem;
   padding: 40px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  transition: transform .3s ease, box-shadow .3s ease;
 }
 
-.card h1{
-  margin-block-end: 1.2em;
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.6);
 }
 
-.card p{
-    font-weight: 400;
+.card h2, .card h3 {
+  color: var(--primary);
 }
 
-/* base hr style inside cards */
+/* Animated HR */
 .card hr {
   border: none;
   height: 2px;
-  background-color: #cbd5e1;
-  box-shadow: 0 2px 6px rgba(100, 116, 139, 0.3);
-
-  width: 0;              /* start hidden */
-  margin: 8px 0 16px;
+  background-color: var(--primary);
+  width: 0;
   opacity: 0;
-
   animation-fill-mode: forwards;
 }
 
-/* when card is hovered: line appears left → right */
 .card:hover hr {
   animation: hrIn 0.35s ease-out forwards;
 }
 
-/* when card is NOT hovered: line disappears right → left */
-.card:not(:hover) hr {
-  animation: hrOut 0.35s ease-in forwards;
-}
-
-/* keyframes for showing the line (left to right) */
 @keyframes hrIn {
-  0% {
-    width: 0;
-    margin-left: 0;
-    opacity: 0;
-  }
-  100% {
-    width: 100%;
-    margin-left: 0;
-    opacity: 1;
-  }
-}
-
-/* keyframes for hiding the line (right to left) */
-@keyframes hrOut {
-  0% {
-    width: 100%;
-    margin-left: 0;
-    opacity: 1;
-  }
-  100% {
-    width: 0;
-    margin-right: 100%;  /* shrinks to the right side */
-    opacity: 0;
-  }
+  0% { width: 0; opacity: 0; }
+  100% { width: 100%; opacity: 1; }
 }
 
 /* Footer */
 footer {
   text-align: center;
   padding: 2rem 1rem;
-  color: #64748b;
-}
-
-/* Responsive */
-@media (max-width: 640px) {
-  .nav-links {
-    overflow-x: auto;
-  }
+  color: var(--muted);
 }
