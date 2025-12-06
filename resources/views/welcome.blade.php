@@ -45,6 +45,17 @@ solutions.</p>
 
     <hr>
 
+
+
+    <!-- <div id="string" style="width: 100%; height: 100px; background-color: red;">
+        <svg width="100%" height="100px">
+            <path id="string-path" d="M 0 100 Q 500 100 1000"
+            stroke="black" stroke-width="4" fill="transparent"/>
+        </svg>
+    </div> -->
+
+
+
     <main>
         <section id="education">
             <div class="container">
